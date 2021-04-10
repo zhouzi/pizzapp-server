@@ -1,7 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nodemon -r dotenv/config --exec ts-node ./src/index.ts",
+    "dev": "NODE_ENV=development nodemon -r dotenv/config --exec ts-node ./src/index.ts",
+    "migrate:rollback": "NODE_ENV=development knex migrate:rollback --knexfile ./src/knexfile.ts",
+    "migrate:latest": "NODE_ENV=development knex migrate:latest --knexfile ./src/knexfile.ts",
+    "migrate:up": "NODE_ENV=development knex migrate:up --knexfile ./src/knexfile.ts",
+    "migrate:down": "NODE_ENV=development knex migrate:down --knexfile ./src/knexfile.ts",
+    "migrate:make": "NODE_ENV=development knex migrate:make --knexfile ./src/knexfile.ts",
     "build": "tsc",
     "start": "node ./build/index.js"
   },

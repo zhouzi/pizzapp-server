@@ -1,16 +1,8 @@
 import { Model } from "objection";
 import Knex from "knex";
+import config from "./knexfile";
 
-export const database = Knex({
-  client: "pg",
-  connection: {
-    connectionString: process.env.DATABASE_URL,
-    ssl:
-      process.env.NODE_ENV === "production"
-        ? { rejectUnauthorized: false }
-        : false,
-  },
-});
+export const database = Knex(config);
 
 Model.knex(database);
 
