@@ -15,10 +15,10 @@ Il vous faudra ensuite le cloner sur votre machine et l'installer comme décrit 
 
 ## Installation
 
-Pré-requis : Node.js, yarn et Docker.
+Pré-requis : Node.js et Docker.
 
 1. Renommer le fichier `.env.model` en `.env`.
-2. Installer les dépendances : `yarn`.
+2. Installer les dépendances : `npm install`.
 
 ## Démarrage
 
@@ -32,7 +32,7 @@ docker-compose up
 Puis dans un autre terminal, il faut démarrer l'application via la commande :
 
 ```
-yarn dev
+npm run dev
 ```
 
 Si tout c'est bien passé, vous devriez être en mesure d'accéder à http://localhost:3000/api/pizzas qui affiche un tableau JSON vide.
