@@ -32,7 +32,7 @@ docker-compose up
 Puis dans un autre terminal, il faut initialiser la base de donnée en créant les tables :
 
 ```
-npm run migrate:rollback
+npm run migrate:latest
 ```
 
 Enfin, vous pouvez démarrer l'application via la commande :
